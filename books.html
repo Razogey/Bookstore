@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تصفح الكتب المعروضة وابحث عن الكتاب الذي ترغب بطلبه.">
+    <title>الكتب | سوق الكتب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="index.html">📚 سوق الكتب</a></h1>
+        <nav class="site-nav" aria-label="القائمة الرئيسية">
+            <a href="index.html">الرئيسية</a>
+            <a href="books.html" aria-current="page">الكتب</a>
+            <a href="add-book.html">اعرض كتابك</a>
+            <a href="request-book.html">طلب كتاب</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section" aria-labelledby="books-heading">
+            <h2 id="books-heading">الكتب المتاحة</h2>
+            <form class="search-form" id="bookSearchForm" role="search">
+                <label class="visually-hidden" for="searchInput">ابحث باسم الكتاب</label>
+                <input class="search-input" id="searchInput" type="search" placeholder="ابحث باسم الكتاب..." autocomplete="off">
+                <button class="button button-primary" type="submit">بحث</button>
+            </form>
+            <p id="booksStatus" class="status-message" aria-live="polite"></p>
+            <div id="booksList" class="books-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>جميع الحقوق محفوظة © 2026 سوق الكتب | <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+</body>
+</html>

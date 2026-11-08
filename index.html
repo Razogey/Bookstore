@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سوق الكتب - اكتشف الكتب واعرض كتابك للبيع أو اطلب الكتاب الذي تبحث عنه.">
+    <title>سوق الكتب | Book Market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="index.html">📚 سوق الكتب</a></h1>
+        <nav class="site-nav" aria-label="القائمة الرئيسية">
+            <a href="index.html" aria-current="page">الرئيسية</a>
+            <a href="books.html">الكتب</a>
+            <a href="add-book.html">اعرض كتابك</a>
+            <a href="request-book.html">طلب كتاب</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section hero" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">مرحباً بك في سوق الكتب</h2>
+            <p>اكتشف عالم الكتب واشترِ كتابك المفضل بكل سهولة.</p>
+            <form class="search-form" id="homeSearchForm" role="search">
+                <label class="visually-hidden" for="homeSearchInput">ابحث عن كتاب</label>
+                <input class="search-input" id="homeSearchInput" type="search" placeholder="ابحث عن كتاب..." autocomplete="off">
+                <button class="button button-light" type="submit">ابحث في الكتب</button>
+            </form>
+        </section>
+
+        <section class="section" aria-labelledby="featured-heading">
+            <div class="section-heading">
+                <h2 id="featured-heading">كتب مقترحة</h2>
+                <a class="button button-primary" href="books.html">عرض جميع الكتب</a>
+            </div>
+            <div id="featuredBooks" class="books-grid" aria-live="polite"></div>
+            <p id="featuredBooksStatus" class="status-message" aria-live="polite"></p>
+        </section>
+
+        <section class="section" id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">من نحن؟</h2>
+            <p>سوق الكتب هو موقع إلكتروني يهدف إلى تسهيل عملية بيع وشراء الكتب وتبادل المعرفة بين القراء.</p>
+            <div class="about-actions">
+                <a class="button button-primary" href="books.html">تصفح الكتب</a>
+                <a class="button button-primary" href="add-book.html">اعرض كتابك للبيع</a>
+                <a class="button button-primary" href="request-book.html">اطلب الكتاب الذي تبحث عنه</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>جميع الحقوق محفوظة © 2026 سوق الكتب | <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+</body>
+</html>

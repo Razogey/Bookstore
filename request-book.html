@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أرسل طلباً للحصول على كتاب من سوق الكتب.">
+    <title>طلب كتاب | سوق الكتب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="index.html">📚 سوق الكتب</a></h1>
+        <nav class="site-nav" aria-label="القائمة الرئيسية">
+            <a href="index.html">الرئيسية</a>
+            <a href="books.html">الكتب</a>
+            <a href="add-book.html">اعرض كتابك</a>
+            <a href="request-book.html" aria-current="page">طلب كتاب</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section form-section" aria-labelledby="request-heading">
+            <h2 id="request-heading">طلب كتاب</h2>
+            <form id="requestBookForm">
+                <label for="requestedBookTitle">اسم الكتاب المطلوب</label>
+                <input class="form-control" id="requestedBookTitle" name="bookTitle" type="text" maxlength="120" required>
+
+                <label for="fullName">الاسم الكامل</label>
+                <input class="form-control" id="fullName" name="fullName" type="text" minlength="3" maxlength="120" autocomplete="name" required>
+
+                <label for="phone">رقم الهاتف</label>
+                <input class="form-control" id="phone" name="phone" type="tel" inputmode="tel" minlength="7" maxlength="20" autocomplete="tel" required>
+
+                <label for="email">البريد الإلكتروني (اختياري)</label>
+                <input class="form-control" id="email" name="email" type="email" maxlength="254" autocomplete="email">
+
+                <label for="city">المدينة أو المنطقة</label>
+                <input class="form-control" id="city" name="city" type="text" maxlength="120" autocomplete="address-level2" required>
+
+                <label for="notes">ملاحظات إضافية (اختياري)</label>
+                <textarea class="form-control" id="notes" name="notes" maxlength="1000"></textarea>
+
+                <button class="button button-primary" type="submit">إرسال الطلب</button>
+                <p id="requestStatus" class="status-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>جميع الحقوق محفوظة © 2026 سوق الكتب | <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أضف بيانات كتابك لعرضه في سوق الكتب.">
+    <title>اعرض كتابك | سوق الكتب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="index.html">📚 سوق الكتب</a></h1>
+        <nav class="site-nav" aria-label="القائمة الرئيسية">
+            <a href="index.html">الرئيسية</a>
+            <a href="books.html">الكتب</a>
+            <a href="add-book.html" aria-current="page">اعرض كتابك</a>
+            <a href="request-book.html">طلب كتاب</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section form-section" aria-labelledby="add-book-heading">
+            <h2 id="add-book-heading">اعرض كتابك للبيع</h2>
+            <form id="addBookForm">
+                <label for="bookTitle">اسم الكتاب</label>
+                <input class="form-control" id="bookTitle" name="title" type="text" maxlength="120" required>
+
+                <label for="bookPrice">السعر بالجنيه</label>
+                <input class="form-control" id="bookPrice" name="price" type="number" min="0.01" step="0.01" required>
+
+                <button class="button button-primary" type="submit">إضافة الكتاب</button>
+                <p id="addBookStatus" class="status-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>جميع الحقوق محفوظة © 2026 سوق الكتب | <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+</body>
+</html>

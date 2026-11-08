@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أرسل رسالة إلى إدارة سوق الكتب عبر نموذج التواصل.">
+    <title>اتصل بنا | سوق الكتب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="index.html">📚 سوق الكتب</a></h1>
+        <nav class="site-nav" aria-label="القائمة الرئيسية">
+            <a href="index.html">الرئيسية</a>
+            <a href="books.html">الكتب</a>
+            <a href="add-book.html">اعرض كتابك</a>
+            <a href="request-book.html">طلب كتاب</a>
+            <a href="contact.html" aria-current="page">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section form-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">اتصل بنا</h2>
+            <p>يسعدنا تواصلك مع إدارة سوق الكتب للاستفسارات والملاحظات.</p>
+            <form id="contactForm" novalidate>
+                <label for="contactName">الاسم الكامل</label>
+                <input class="form-control" id="contactName" name="fullName" type="text" minlength="3" maxlength="120" autocomplete="name" required>
+
+                <label for="contactEmail">البريد الإلكتروني</label>
+                <input class="form-control" id="contactEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+
+                <label for="contactPhone">رقم الهاتف (اختياري)</label>
+                <input class="form-control" id="contactPhone" name="phone" type="tel" inputmode="tel" minlength="7" maxlength="20" autocomplete="tel">
+
+                <label for="contactSubject">عنوان الرسالة</label>
+                <input class="form-control" id="contactSubject" name="subject" type="text" maxlength="160" required>
+
+                <label for="contactMessage">نص الرسالة</label>
+                <textarea class="form-control" id="contactMessage" name="message" minlength="5" maxlength="3000" required></textarea>
+
+                <button class="button button-primary" type="submit">إرسال الرسالة</button>
+                <p id="contactStatus" class="status-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>جميع الحقوق محفوظة © 2026 سوق الكتب | <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+</body>
+</html>
